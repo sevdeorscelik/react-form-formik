@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+
+h1 {
+  font-family: 'Nerko One', cursive;
+}
+
+.Container{
+  
+  width: 80%;
+  height: 85vh;
+  margin: 70px auto;
+ 
+
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.brand-box{
+font-size: 1.7rem;
+text-align: end;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: #333;
+  color: #eee;
+  padding: 50px;
+  border-radius:50px;
+  border: double 20px #fff;
+  
+}
+
+.labelName, .labelMail, .labelColor{
+  
+  margin-top: 1rem;
+}
+
+.input, select{
+  margin-top: .5rem;
+  
+}
+
+select{
+  padding: 5px 0;
+  outline: none;
+}
+
+button{
+  width: 20%;
+  cursor: pointer;
+}
+
