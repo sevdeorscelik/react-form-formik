@@ -4,7 +4,39 @@ import * as Yup from "yup"
 import './App.css'
 
 function App() {
-  
+
+/*
+  return(
+  <div>
+    <h1>My Form</h1>
+    <Formik
+      initialValues={{ name: 'jared' }}
+      onSubmit={(values, actions) => {
+        setTimeout(() => {
+          console.log(values);
+         // alert(JSON.stringify(values, null, 2));
+          actions.setSubmitting(false);
+        }, 1000);
+      }}
+    >
+      {props => (
+        <form onSubmit={props.handleSubmit}>
+          <input
+            type="text"
+            onChange={props.handleChange}
+            onBlur={props.handleBlur}
+            value={props.values.name}
+            name="name"
+          />
+          {props.errors.name && <div id="feedback">{props.errors.name}</div>}
+          <button type="submit">Submit</button>
+        </form>
+      )}
+    </Formik>
+  </div>
+);
+
+*/
   return (
     <div className="Container">
       <div className='brand-box'>
@@ -15,10 +47,10 @@ function App() {
       <div className='magic-form'>
         <Formik
           initialValues={{
-            name: '',
-            email: '',
+            name:"",
+            email:"",
             agree: false,
-            favoriteColor: ''
+            favoriteColor:""
           }}
           validationSchema={
             Yup.object({
@@ -32,12 +64,12 @@ function App() {
 
           //burda tam oalrak ne yaptik
 
-          onSubmit={(values, { resetForm, setSubmitting }) => {
+          onSubmit={(values, actions) => {
             console.log(values);
             setTimeout(()=>{
               //resetForm()
-              //setSubmitting(false)
-            },2000)
+              actions.setSubmitting(false)
+            },1000)
           }}
         >
           {
@@ -54,12 +86,6 @@ function App() {
                   placeholder='Max Mustermann...'
                 />
                 
-                {
-                  errors.name && touched.name && (
-                    <div className='input-feedback'>{errors.name}</div>
-                  )
-                }
-
                 <br />
 
                 <label htmlFor="email" className='top-margin' className='labelMail'>E-mail : </label>
@@ -114,6 +140,7 @@ function App() {
       </div>
     </div>
   )
+  
 }
 
 export default App
