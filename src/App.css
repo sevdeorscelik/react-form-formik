@@ -85,3 +85,8 @@ button{
   
   
 }
+
+.errors{
+  color: red;
+  margin-top: 5px;
+}

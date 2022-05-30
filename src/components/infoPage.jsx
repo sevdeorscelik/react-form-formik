@@ -6,6 +6,7 @@ const InfoPage = ( { values } ) => {
 
   return (
     <div className="infoPage">
+      
         <ul>
             <li>Name : {values.name}</li>
             <li>E-Mail : {values.email}</li>

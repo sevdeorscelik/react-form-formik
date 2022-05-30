@@ -56,7 +56,7 @@ const App = () => {
                   onBlur={handleBlur}
                 />
                 {errors.name && touched.name && (
-                  <div>{errors.name}</div>
+                  <div className='errors'>{errors.name}</div>
                 )}
 
                 <br />
@@ -72,7 +72,7 @@ const App = () => {
                   onBlur={handleBlur}
                 />
                 {errors.email && touched.email && (
-                  <div>{errors.email}</div>
+                  <div className='errors'>{errors.email}</div>
                 )}
 
                 <br />
@@ -89,7 +89,7 @@ const App = () => {
                   <option value="yellow" label='Gelb' />
                 </select>
                 {errors.favoriteColor && touched.favoriteColor && (
-                  <div>{errors.favoriteColor}</div>
+                  <div className='errors'>{errors.favoriteColor}</div>
                 )}
 
                 <br />
@@ -106,7 +106,7 @@ const App = () => {
                     Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.
                   </label>
                   {errors.agree && touched.agree && (
-                    <div>{errors.agree}</div>
+                    <div className='errors'>{errors.agree}</div>
                   )}
                 </div>
 
